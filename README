@@ -1,0 +1,48 @@
+Posy::Plugin::ShortLinks version 0.1
+====================================
+
+This module allows one to use shortened links within one's entry
+files.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  Posy
+  Posy::Core
+  Test::More
+
+ACTIVATION
+
+Add this module to Posy's @plugins array.
+
+Add the "shortlinks" action to Posy's @entry_actions array between
+"parse_entry" and "render_entry".
+
+CONFIGURATION
+
+Populate "$config_dir/plugins/shortlinks" with key-value pairs.  They
+key is the shortened link that you wish to use within your entries
+and the value is what will be substituted for the key when the entry is
+rendered.
+
+USE
+
+Add shortened links by inserting "{{link:<key>}}" into one's entries.
+
+COPYRIGHT AND LICENSE
+
+Copyright (C) 2005 blair christensen.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+

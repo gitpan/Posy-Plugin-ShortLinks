@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Posy-Plugin-ShortLinks.t
+lib/Posy/Plugin/ShortLinks.pm
+META.yml                                 Module meta-data (added by MakeMaker)
