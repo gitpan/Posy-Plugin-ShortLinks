@@ -1,7 +1,7 @@
 package Posy::Plugin::ShortLinks;
 
 #
-# $Id: ShortLinks.pm,v 1.3 2005/03/04 02:22:42 blair Exp $
+# $Id: ShortLinks.pm,v 1.5 2005/03/07 15:10:14 blair Exp $
 #
 
 use 5.006;
@@ -10,15 +10,15 @@ use warnings;
 
 =head1 NAME
 
-Posy::Plugin::ShortLinks - Provide shortened links
+Posy::Plugin::ShortLinks - Transform keywords into links
 
 =head1 VERSION
 
-This document describes Posy::Plugin::ShortLinks version B<0.1>.
+This document describes Posy::Plugin::ShortLinks version B<0.2>.
 
 =cut
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 =head1 SYNOPSIS
 
@@ -47,8 +47,8 @@ our $VERSION = '0.1';
 
 =head1 DESCRIPTION
 
-This module replaces all shortened links with their configured link
-values.
+This modules replaces all properly formatted keywords within one's
+entry files with full links.
 
 =head1 INTERFACE
 
@@ -70,7 +70,7 @@ sub init {
   # read configuration file
   my $cf = File::Spec->catfile($self->{config_dir}, 'plugins',
                                'shortlinks');
-  warn "reading $cf\n";
+  $self->debug(3, "ShortLinks: Reading $cf");
   %links = $self->read_config_file($cf);
 } # init()
 
@@ -104,6 +104,12 @@ sub _create_link {
 =head1 SEE ALSO
 
 L<Perl>, L<Posy>
+
+=head1 BUGS AND LIMITATIONS
+
+Please report any bugs or feature requests to
+C<bug-Posy-Plugin-ShortLinks@rt.cpan.org> or through the web interface at 
+L<http://rt.cpan.org>.
 
 =head1 AUTHOR
 

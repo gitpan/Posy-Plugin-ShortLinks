@@ -2,6 +2,9 @@ Revision history for Perl extension Posy::Plugin::ShortLinks.
 
 ---
 
-# 0.1  20050302
+# 0.2   20050307
+  * BUGFIX Convert a warn() to a $self->debug() call.
+
+# 0.1   20050302
   * Initial release of Posy::Plugin::ShortLinks
 

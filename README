@@ -1,8 +1,8 @@
-Posy::Plugin::ShortLinks version 0.1
+Posy::Plugin::ShortLinks version 0.2
 ====================================
 
-This module allows one to use shortened links within one's entry
-files.
+This modules replaces all properly formatted keywords within one's
+entry files with full links.
 
 INSTALLATION
 
